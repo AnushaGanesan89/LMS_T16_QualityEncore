@@ -1,6 +1,7 @@
 package com.lms.ui.appHooks;
 import java.util.Properties;
 
+import org.junit.AfterClass;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import com.lms.ui.driver.DriverFactory;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
@@ -30,7 +32,7 @@ public class Hooks {
 		}
 	}
 	
-	@After
+	@AfterAll
 	public static void aftAll()
 	{
 		try {
