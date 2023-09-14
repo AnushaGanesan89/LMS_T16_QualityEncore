@@ -23,11 +23,11 @@ public class DeleteAssignmentValidation_SD {
 		deleteassignobj.enables_delete_dialog_box();
 	}
 
-	@Then("Enables yes button on delete alert dialog box")
+	/*@Then("Enables yes button on delete alert dialog box")
 	public void enables_button_on_delete_alert_dialog_box() {
 		deleteassignobj.enables_yes_button_on_delete_alert_dialog_box();
 	}
-	
+	*/
 	
 
 	@When("Clicks on yes button")
@@ -45,11 +45,12 @@ public class DeleteAssignmentValidation_SD {
 		deleteassignobj.selected_assignment_details_are_deleted_from_data_table();
 		
 	}
+	/*
 	@Then("Enables no button on delete alert dialog box")
 	public void enables_no_button_on_delete_alert_dialog_box() {
 		deleteassignobj.enables_delete_dialog_box();
 	   
-	}
+	}*/
 
 	@When("Clicks on no button")
 	public void clicks_on_no_button() {

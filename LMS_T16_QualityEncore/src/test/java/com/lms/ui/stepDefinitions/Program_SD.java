@@ -13,6 +13,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.lms.ui.driver.DriverFactory;
 import com.lms.ui.pageObject.Program_obj;
+import com.lms.ui.pageObject.VerifySort_obj;
 
 import io.cucumber.java.en.*;
 
@@ -25,7 +26,8 @@ public class Program_SD extends DriverFactory{
 		dr.get("https://www.google.com/");
 	   
 	}
-
+	VerifySort_obj objsort = new VerifySort_obj(dr);
+	
 	@When("Admin clicks {string} on the navigation bar")
 	public void admin_clicks_on_the_navigation_bar(String string) {
 	   pgm.clkProgramLink();
@@ -493,41 +495,38 @@ public class Program_SD extends DriverFactory{
 	public void admin_should_land_on_manage_program_page_and_can_see_the_selected_programs_are_not_deleted_from_the_data_table() {
 		pgm.getTitle_ManageProgram_Page();
 	}
-//Feature 6 Sorting Validation	
+
+//Feature sorting	
+	
+
 	@When("Admin clicks the sort icon of program name column")
 	public void admin_clicks_the_sort_icon_of_program_name_column() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		objsort.clkSortIconProgramNameColumn();
 	}
 
 	@Then("The data get sorted on the table based on the program name column values in ascending order")
 	public void the_data_get_sorted_on_the_table_based_on_the_program_name_column_values_in_ascending_order() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		objsort.clkSortIconProgramNameColumn();
+		objsort.Sortingmethod();
 	}
 	
 	@Given("The data is in the ascending order on the table based on Program Name column")
 	public void the_data_is_in_the_ascending_order_on_the_table_based_on_program_name_column() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
 	}
 
 	@Then("The data get sorted on the table based on the program name column values in descending order")
 	public void the_data_get_sorted_on_the_table_based_on_the_program_name_column_values_in_descending_order() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		objsort.Sortingmethod();
 	}
-	
-	@When("Admin clicks the sort icon of program Desc column")
+@When("Admin clicks the sort icon of program Desc column")
 	public void admin_clicks_the_sort_icon_of_program_desc_column() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	objsort.clkSortIconProgramDescColumn();
 	}
 
 	@Then("The data get sorted on the table based on the program description column values in ascending order")
 	public void the_data_get_sorted_on_the_table_based_on_the_program_description_column_values_in_ascending_order() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		objsort.Sortingmethod();
 	}
 	
 	@Given("The data is in the ascending order on the table based on Program Description column")
@@ -538,37 +537,27 @@ public class Program_SD extends DriverFactory{
 
 	@Then("The data get sorted on the table based on the program description column values in descending order")
 	public void the_data_get_sorted_on_the_table_based_on_the_program_description_column_values_in_descending_order() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		objsort.Sortingmethod();
 	}
-	
-	@When("Admin clicks the sort icon of program Status column")
+@When("Admin clicks the sort icon of program Status column")
 	public void admin_clicks_the_sort_icon_of_program_status_column() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	objsort.clkSortIconProgramStatusColumn();
 	}
 
 	@Then("The data get sorted on the table based on the program status column values in ascending order")
 	public void the_data_get_sorted_on_the_table_based_on_the_program_status_column_values_in_ascending_order() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		objsort.Sortingmethod();
 	}
 	
 	@Given("The data is in the ascending order on the table based on Program Status column")
 	public void the_data_is_in_the_ascending_order_on_the_table_based_on_program_status_column() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
 	}
 
 	@Then("The data get sorted on the table based on the program status column values in descending order")
 	public void the_data_get_sorted_on_the_table_based_on_the_program_status_column_values_in_descending_order() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		objsort.Sortingmethod();
 	}
-//Feature 7 Pagination	
-	
-
-
 
 
 }

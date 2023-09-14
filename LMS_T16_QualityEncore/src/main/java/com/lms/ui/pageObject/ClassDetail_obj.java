@@ -1,7 +1,7 @@
 package com.lms.ui.pageObject;
 
-import static org.junit.Assert.assertTrue;
-
+//import static org.junit.Assert.Assert.assertTrue;
+//import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -71,7 +71,7 @@ public class ClassDetail_obj extends BaseClass {
 	 }
 
 
-			public void AddClassDetail()
+			public boolean AddClassDetail()
 	{
 		
 			Batchidval.getAttribute("value");
@@ -81,83 +81,90 @@ public class ClassDetail_obj extends BaseClass {
 		
 		try {
 			status = editpopupchk.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 			LoggerLoad.info("edit page is displayed");
 		} catch (AssertionError e) {
 			LoggerLoad.error("edit page is not displayed");
 			System.out.println(e.getMessage());
-		}
+		} 
+		 return status;
 	}
-			public void BatchIdDropDown() {
+			public boolean BatchIdDropDown() {
 				try {
 			           status = BatchIdDropDown_WE.isDisplayed();
-			           assertTrue(status);
+			         //  Assert.assertTrue(status);
 			           LoggerLoad.info("Assert True in try editor block");
 
 			       } catch (AssertionError e) {
 			           LoggerLoad.error("Assert false in try editor block");
 			           System.out.println(e.getMessage());
-			       }
+			       } 
+				 return status;
 	        }
 			
-			public void StaffIdDropDown() {
+			public boolean StaffIdDropDown() {
 				try {
 			           status = StaffIdDropDown_WE.isDisplayed();
-			           assertTrue(status);
+			           //Assert.assertTrue(status);
 			           LoggerLoad.info("Assert True in try editor block");
 
 			       } catch (AssertionError e) {
 			           LoggerLoad.error("Assert false in try editor block");
 			           System.out.println(e.getMessage());
-			       }
+			       } 
+				 return status;
 	        }
 			
-			public void CalendarIcon() {
+			public boolean CalendarIcon() {
 				try {
 			           status = CalendarIcon_WE.isDisplayed();
-			           assertTrue(status);
+			       //   Assert.assertTrue(status);
 			           LoggerLoad.info("Assert True in try editor block");
 
 			       } catch (AssertionError e) {
 			           LoggerLoad.error("Assert false in try editor block");
 			           System.out.println(e.getMessage());
-			       }
+			       } 
+				 return status;
 	        }
 			
-			public void SaveButton() {
+			public boolean SaveButton() {
 				try {
 			           status = SaveButton_WE.isDisplayed();
-			           assertTrue(status);
+			           //Assert.assertTrue(status);
 			           LoggerLoad.info("Assert True in try editor block");
 
 			       } catch (AssertionError e) {
 			           LoggerLoad.error("Assert false in try editor block");
 			           System.out.println(e.getMessage());
-			       }
+			       } 
+				 return status;
 	        }
 			
-			public void CancelButton() {
+			public boolean CancelButton() {
 				try {
 			           status = CancelButton_WE.isDisplayed();
-			           assertTrue(status);
+			         //  Assert.assertTrue(status);
 			           LoggerLoad.info("Assert True in try editor block");
 
 			       } catch (AssertionError e) {
 			           LoggerLoad.error("Assert false in try editor block");
 			           System.out.println(e.getMessage());
-			       }
+			       } 
+				 return status;
 	        }
 			
-			public void CloseButton() {
+			public boolean CloseButton() {
 				try {
 			           status = CloseButton_WE.isDisplayed();
-			           assertTrue(status);
+			           //Assert.assertTrue(status);
 			           LoggerLoad.info("Assert True in try editor block");
 
 			       } catch (AssertionError e) {
 			           LoggerLoad.error("Assert false in try editor block");
 			           System.out.println(e.getMessage());
-			       }
+			       } 
+				 return status;
 	        }			
 }
 	

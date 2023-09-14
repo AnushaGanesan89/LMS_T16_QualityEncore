@@ -1,7 +1,7 @@
 package com.lms.ui.pageObject;
 
-import static org.junit.Assert.assertTrue;
 
+//import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,11 +38,11 @@ WebDriver driver = com.lms.ui.driver.DriverFactory.getDriver();
 	}
 
 
-	public void chkEditpopage()
+	public boolean chkEditpopage()
 	{
 		try {
 			status = editpopupchk.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("edit page is displayed");
 
@@ -50,11 +50,11 @@ WebDriver driver = com.lms.ui.driver.DriverFactory.getDriver();
 			LoggerLoad.error("edit page is not displayed");
 			System.out.println(e.getMessage());
 		}
-		
+		return status;
 		
 	}
 	
-	public void chkallrws()
+	public boolean chkallrws()
 	{
 		
 			Batchidval.getAttribute("value");
@@ -64,13 +64,14 @@ WebDriver driver = com.lms.ui.driver.DriverFactory.getDriver();
 		
 		try {
 			status = editpopupchk.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("edit page is displayed");
 
 		} catch (AssertionError e) {
 			LoggerLoad.error("edit page is not displayed");
 			System.out.println(e.getMessage());
-		}
+		}return status;
 	}
+	
 }

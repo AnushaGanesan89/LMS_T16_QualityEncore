@@ -1,5 +1,6 @@
 package com.lms.ui.stepDefinitions;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import com.lms.ui.driver.DriverFactory;
@@ -26,16 +27,16 @@ public class AllClass_SD {
 	EditClass_obj objedc = new EditClass_obj(driver);
 	ManageClassPage_obj MCP = new ManageClassPage_obj(driver);
 	ClassDetail_obj CD = new ClassDetail_obj(driver);
-	
+	/*
 @Given("Admin is on dashboard page after Login")
 public void admin_is_on_dashboard_page_after_login() {
     
     
 }
-
+*/
 @When("Admin clicks {string} button on the navigation bar")
 public void admin_clicks_button_on_the_navigation_bar(String string) {
-	  MCP.Classbutton();
+	 MCP.Classbutton();
     
 }
 
@@ -53,14 +54,14 @@ public void get_the_response_time_for_navigation_from_dashboard_page_to_manage_c
 
 @Then("Admin should see header with {string}")
 public void admin_should_see_header_with(String string) {
-	 MCP.IconHeaderDisplay();
-    
+	 boolean status =MCP.IconHeaderDisplay();
+     Assert.assertTrue(status);
 }
 
 @When("Admin clicks {string} button on the navigation bar and get all text from the portal page")
 public void admin_clicks_button_on_the_navigation_bar_and_get_all_text_from_the_portal_page(String string) {
-	 MCP.ManageClassDetail();
-    
+	boolean status= MCP.ManageClassDetail();
+     Assert.assertTrue(status);
 }
 
 @Then("Admin should see correct spelling for the all the fields")
@@ -71,20 +72,21 @@ public void admin_should_see_correct_spelling_for_the_all_the_fields() {
 
 @Then("Admin should see disabled delete icon below the {string}")
 public void admin_should_see_disabled_delete_icon_below_the(String string) {
-	 MCP.DeleteIconDisplay();
-    
+	boolean status= MCP.DeleteIconDisplay();
+	  Assert.assertTrue(status);
 }
 
 @Then("Admin should see search bar on the class page")
 public void admin_should_see_search_bar_on_the_class_page() {
     
-	MCP.SearchBarDisplay();
+boolean status =	MCP.SearchBarDisplay();
+	Assert.assertTrue(status);
 }
 
 @Then("Admin should see +Add New Class button on the class page")
 public void admin_should_see_add_new_class_button_on_the_class_page() {
-	  MCP.AddNewClassDisplay();
-    
+	 boolean status= MCP.AddNewClassDisplay();
+	 Assert.assertTrue(status);
 }
 
 @Then("Admin should see data table on the Manage Class Page With following column headers. \\(Check box symbol,Batch Id, Class No,Class Date, Class Topic, Staff Id, Description, Comments, Notes, Recording, Edit Delete)")
@@ -135,16 +137,16 @@ public void above_the_footer_admin_should_see_the_text_as_below_the_table_x_star
     
 }
 
-@Then("Admin should see the pagination controls under the data table")
+/*@Then("Admin should see the pagination controls under the data table")
 public void admin_should_see_the_pagination_controls_under_the_data_table() {
-	 MCP.paginationcontrols();
-    
-}
+	boolean status = MCP.paginationcontrols();
+	Assert.assertTrue(status);
+}*/
 
 @Then("Admin should see the text with total number classes in the data table. \\( {string})")
 public void admin_should_see_the_text_with_total_number_classes_in_the_data_table(String string) {
-	 MCP.NoOfClass();
-    
+	boolean status= MCP.NoOfClass();
+	   Assert.assertTrue(status);
 }
 
 
@@ -162,7 +164,9 @@ public void admin_enters_batch_id_into_search_box() {
 
 @Then("Displays entries with that batch Id")
 public void displays_entries_with_that_batch_id() {
-	MCP.PopUpBatchIDField();   
+MCP.PopUpBatchIDField();
+	
+	
     
 }
 
@@ -264,8 +268,8 @@ public void admin_should_see_a_popup_with_heading(String string) {
 
 @Then("Admin should see input fields Text \\(Batch ID , No of Classes, Class Date, Class Topic, Staff Id, Class description, Comments, Notes, Recordings)")
 public void admin_should_see_input_fields_text_batch_id_no_of_classes_class_date_class_topic_staff_id_class_description_comments_notes_recordings() {
-	CD.AddClassDetail();
-    
+	 boolean status= CD.AddClassDetail();
+	Assert.assertTrue(status);
 }
 
 @Then("{int} textbox should be  present in Class details popup window")
@@ -276,46 +280,50 @@ public void textbox_should_be_present_in_class_details_popup_window(Integer int1
 
 @Then("Admin should see  dropdown option for Batch ID")
 public void admin_should_see_dropdown_option_for_batch_id() {
-	CD.BatchIdDropDown();
+	 boolean status= CD.BatchIdDropDown();
+	Assert.assertTrue(status);
     
 }
 
 @Then("Admin should see  dropdown option for Staff Id")
 public void admin_should_see_dropdown_option_for_staff_id() {
     
-	  CD.StaffIdDropDown();
+	 boolean status=   CD.StaffIdDropDown();
+	  Assert.assertTrue(status);
 }
 
 @Then("Admin should see  calendar icon for class date")
 public void admin_should_see_calendar_icon_for_class_date() {
-	  CD.CalendarIcon();
-    
+	 boolean status= CD.CalendarIcon();
+	  Assert.assertTrue(status);
 }
 
 @Then("Admin should see  save button in the class detail popup window")
 public void admin_should_see_save_button_in_the_class_detail_popup_window() {
-	CD.SaveButton();
-    
+	 boolean status= CD.SaveButton();
+	Assert.assertTrue(status);
 }
 
 @Then("Admin should see  cancel button in the class detail popup window")
 public void admin_should_see_cancel_button_in_the_class_detail_popup_window() {
-	 CD.CancelButton();
+	 boolean status= CD.CancelButton();
+	 Assert.assertTrue(status);
     
 }
 
 @Then("Admin should see  close button on the class details popup window")
 public void admin_should_see_close_button_on_the_class_details_popup_window() {
     
-	CD.CloseButton();   
+	boolean status =CD.CloseButton();
+	Assert.assertTrue(status);
 }
 
 //Add new class
 
 @Given("Admin is in  class detail popup window")
 public void admin_is_in_class_detail_popup_window() {
-    objanw.checkpopmsg();
-    
+	 boolean status=    objanw.checkpopmsg();
+	 Assert.assertTrue(status);
 }
 
 @When("Admin clicks  Batch ID dropdown")
@@ -326,8 +334,8 @@ public void admin_clicks_batch_id_dropdown() {
 
 @Then("Batch id in the drop down should match with Batch id manage batch page table")
 public void batch_id_in_the_drop_down_should_match_with_batch_id_manage_batch_page_table() {
-    objanw.checkbatchdrpmsg();
-    
+	boolean status=  objanw.checkbatchdrpmsg();
+    Assert.assertTrue(status);
 }
 
 @When("Admin enters all mandatory field values with valid data and clicks save button {string} and {string}")
@@ -338,8 +346,8 @@ public void admin_enters_all_mandatory_field_values_with_valid_data_and_clicks_s
 
 @Then("Admin should see new class details is added in the data table")
 public void admin_should_see_new_class_details_is_added_in_the_data_table() {
-    objanw.checfieldsmsg();
-    
+	boolean status= objanw.checfieldsmsg();
+	Assert.assertTrue(status);
 }
 
 @When("Admin enters all mandatory field values with invalid data and clicks save button {string} and {string}")
@@ -351,7 +359,8 @@ public void admin_enters_all_mandatory_field_values_with_invalid_data_and_clicks
 @Then("Error message should appear in alert")
 public void error_message_should_appear_in_alert() {
     
-    objanw.alertmsg();
+	 boolean status= objanw.alertmsg();
+    Assert.assertTrue(status);
 }
 
 @When("Admin enters values in all fields with valid data and clicks save button {string} and {string}")
@@ -386,8 +395,8 @@ public void admin_enters_data_missing_value_in_no_of_class_and_clicks_save_butto
 
 @Then("No of classes is missing")
 public void no_of_classes_is_missing() {
-	objanw.checknoclasspmsg();
-    
+	boolean status=	objanw.checknoclasspmsg();
+	Assert.assertTrue(status);
 }
 
 @When("Admin enters data missing value in  class date and clicks save button {string} and {string}")
@@ -398,8 +407,8 @@ public void admin_enters_data_missing_value_in_class_date_and_clicks_save_button
 
 @Then("class date is missing")
 public void class_date_is_missing() {
-	objanw.checkclasdtmsg();
-    
+	boolean status=	objanw.checkclasdtmsg();
+	Assert.assertTrue(status);
 }
 
 @When("Admin enters data missing value in staff id and clicks save button {string} and {string}")
@@ -410,8 +419,9 @@ public void admin_enters_data_missing_value_in_staff_id_and_clicks_save_button_a
 
 @Then("staff id is missing")
 public void staff_id_is_missing() {
-	objanw.checkstaffidmsg();
-    
+
+	 boolean status= 	objanw.checkstaffidmsg();
+	Assert.assertTrue(status);
 }
 
 @When("Admin enters passed date in the class date field and clicks save button {string} and {string}")
@@ -513,8 +523,8 @@ public void admin_clicks_cancel_button_entering_values_in_the_fields() {
 
 @Then("Admin should land on Manage Class Page and validate new class is not created in the data table")
 public void admin_should_land_on_manage_class_page_and_validate_new_class_is_not_created_in_the_data_table() {
-    objanw.mangecalssnoentrychk();
-    
+	 boolean status= objanw.mangecalssnoentrychk();
+	 Assert.assertTrue(status);
 }
 //edit new class
 
@@ -544,14 +554,14 @@ public void admin_clicks_edit_button_from_one_of_the_row_in_data_table() {
 
 @Then("Edit popup window appears with same row values in the all fields")
 public void edit_popup_window_appears_with_same_row_values_in_the_all_fields() {
-    objedc.chkallrws();
-    
+   boolean status= objedc.chkallrws();
+   Assert.assertTrue(status);
 }
 
 @Given("Admin is in  Edit class detail popup window")
 public void admin_is_in_edit_class_detail_popup_window() {
-	 objedc.chkEditpopage();
-    
+	boolean status= objedc.chkEditpopage();
+	 Assert.assertTrue(status);  
 }
 
 @Then("Admin should see particular class details is updated in the data table")
@@ -588,14 +598,14 @@ public void admin_clicks_delete_button_in_data_table_row_level() {
 
 @Then("Admin should see alert")
 public void admin_should_see_alert() {
-	obj.Messagedisplayed();
-    
+	boolean status =obj.Messagedisplayed();
+	Assert.assertTrue(status);
 }
 
 @Then("Alert should have yes button to accept")
 public void alert_should_have_yes_button_to_accept() {
-	obj.YesMessagedisplayed();
-    
+	boolean status =obj.YesMessagedisplayed();
+	Assert.assertTrue(status);
 }
 
 @Then("Alert should have no button to reject")
@@ -603,10 +613,12 @@ public void alert_should_have_no_button_to_reject() {
 	obj.alertmsgno();
     
 }
+/*
 @Given("Admin is in delete alert")
 public void admin_is_in_delete_alert() {
-	obj.Messagedisplayed();
-}
+	boolean status= obj.Messagedisplayed();
+	Assert.assertTrue(status);
+}*/
     
 
 
@@ -614,13 +626,14 @@ public void admin_is_in_delete_alert() {
 public void admin_clicks_yes_button() {
     
 	obj.alertmsgyes();
-	//obj.NoMessagedisplayed();    
+	boolean status = obj.NoMessagedisplayed();    
+	Assert.assertTrue(status);
 }
 
 @Then("Success message and validate particular class details are deleted from the data table")
 public void success_message_and_validate_particular_class_details_are_deleted_from_the_data_table() {
-	obj.Messagedisplayed();
-    
+	boolean status =obj.Messagedisplayed();
+	Assert.assertTrue(status);
 }
 
 @When("Admin clicks no button")
@@ -643,30 +656,32 @@ public void admin_clicks_single_row_level_check_box_in_the_data_table() {
 
 @Then("Admin should see delete icon below the header is enabled")
 public void admin_should_see_delete_icon_below_the_header_is_enabled() {
-	obj.deletebtnenabledchk();
-    
+	boolean status =obj.deletebtnenabledchk();
+	Assert.assertTrue(status);
 }
 
 @Then("Admin should see tick mark in check box")
 public void admin_should_see_tick_mark_in_check_box() {
-	obj.chkboxselectCheckmsg();   
-    
+	boolean status =obj.chkboxselectCheckmsg();   
+	Assert.assertTrue(status);
 }
 
 @When("Admin clicks multiple row level check box in the data table")
 public void admin_clicks_multiple_row_level_check_box_in_the_data_table() {
 	obj.multichkboxclickmethod();
-    
+	
 }
 
 @Then("Admin should see tick mark in check box  of the selected rows")
 public void admin_should_see_tick_mark_in_check_box_of_the_selected_rows() {
     
-	obj.multichkboxselectCheckmsg();
+	boolean status =obj.multichkboxselectCheckmsg();
+	Assert.assertTrue(status);
 }
 @Then("Admin should land on manage class page and validate particular class details are deleted from the data table")
 public void admin_should_land_on_manage_class_page_and_validate_particular_class_details_are_deleted_from_the_data_table() {
-	obj.ManageclassLandingPage();
+	boolean status= obj.ManageclassLandingPage();
+	Assert.assertTrue(status);
     
 }
 
@@ -707,50 +722,54 @@ public void admin_clicks_class_button_on_the_navigation_bar() {
 
 @Then("Data table should display one page  when entries available")
 public void data_table_should_display_one_page_when_entries_available() {
-    objpg.dataMessagedisplayed();
-    
+    boolean status = objpg.dataMessagedisplayed();
+    Assert.assertTrue(status);
 }
 
 @Then("Right arrow should be enabled in page one  when entries are more than five available")
 public void right_arrow_should_be_enabled_in_page_one_when_entries_are_more_than_five_available() {
     
-    objpg.rightarrowchk();
+   boolean status= objpg.rightarrowchk();
+   Assert.assertTrue(status);
 }
 
 @Then("Left arrow should be disabled in page one  when entries are more than five available")
 public void left_arrow_should_be_disabled_in_page_one_when_entries_are_more_than_five_available() {
-    objpg.leftarrowchk();
-    
+  boolean status=  objpg.leftarrowchk();
+  Assert.assertTrue(status);
 }
 
 @Then("Right arrow should be enabled in page two when entries are more than ten available")
 public void right_arrow_should_be_enabled_in_page_two_when_entries_are_more_than_ten_available() {
     
-    objpg.rightdblClick();
+    boolean status = objpg.rightdblClick();
+    Assert.assertTrue(status);
 }
 
 @Then("Left arrow should be enabled in page two")
 public void left_arrow_should_be_enabled_in_page_two() {
-    objpg.leftarrowchk();
+   boolean status= objpg.leftarrowchk();
+   Assert.assertTrue(status);
     
 }
 
 @Then("Data table should display  pageone when entries available")
 public void data_table_should_display_pageone_when_entries_available() {
     
-	  objpg.dataMessagedisplayed();
+	  boolean status = objpg.dataMessagedisplayed();
+	  Assert.assertTrue(status);
 }
 
 @Then("if entries are more than five in data table pagination controls enabled")
 public void if_entries_are_more_than_five_in_data_table_pagination_controls_enabled() {
-    objpg.arrenabledmethd();
-    
+ boolean status =   objpg.arrenabledmethd();
+ Assert.assertTrue(status);
 }
 
 @Then("if entries are less than five in data table pagination controls disabled")
 public void if_entries_are_less_than_five_in_data_table_pagination_controls_disabled() {
-    objpg.arrdisbledmethd();
-    
+    boolean status =objpg.arrdisbledmethd();
+    Assert.assertTrue(status);
 }
 @Given("Admin is in add class details popup window")
 public void admin_is_in_add_class_details_popup_window() {

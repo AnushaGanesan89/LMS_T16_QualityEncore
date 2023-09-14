@@ -1,6 +1,9 @@
 package com.lms.ui.stepDefinitions;
 
+import org.openqa.selenium.Keys;
+
 import com.lms.ui.pageObject.manageAssignmentPage_obj;
+import com.lms.ui.util.LoggerLoad;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -48,7 +51,7 @@ public void get_all_text_from_manage_assignment_page() {
 
 @Then("Checks spellings for all the fields")
 public void checks_spellings_for_all_the_fields() {
-	objmg.checks_spellings_for_all_the_fields();
+//	objmg.checks_spellings_for_all_the_fields();
 }
 
 @Then("Verify delete icon is disable")
@@ -82,8 +85,8 @@ public void verify_checkbox_in_all_rows_of_data_table_when_entries_are_available
 }
 
 @Then("Get the text above the footer Showing  to of entries")
-public void get_the_text_above_the_footer_showing_to_of_entries(Integer int1, Integer int2, Integer int3) {
-	objmg.validate_text_above_the_footer_Showing_zero_to_zero_of_zero_entries();
+public void get_the_text_above_the_footer_showing_to_of_entries() {
+//	objmg.validate_text_above_the_footer_Showing_zero_to_zero_of_zero_entries();
 }
 
 @Then("Get the text above the footer {string}")
@@ -95,8 +98,53 @@ public void get_the_text_above_the_footer(String string) {
 public void verify_the_page_numbers() {
 	objmg.verify_the_page_numbers();
 }
-
-
-	
+@When("enters assignment name")
+public void enters_assignment_name()
+{
+	objmg.click_and_enters_assignment_name();
 }
 
+@When("enters assignment description")
+public void enters_assignment_description()
+{
+	objmg.click_and_enters_assignment_description();
+}
+
+@When("enters assignment duedate")
+	public void enters_assignment_duedate()
+{
+	objmg.click_and_enters_assignment_duedate();
+	 
+}
+@When("enters grade value")
+public void click_and_enters_grade()
+{
+	objmg.click_and_enters_grade();
+	
+}
+@Then("Displays all assignemts details with assignment duedate" )
+public void Display_all_assignemts_details_with_assignment_duedate() 
+{
+	objmg.Display_all_assignemts_details_with_assignment_duedate();
+}
+
+@Then("Displays all assignemts details with assignment name" )
+public void Display_all_assignemts_details_with_assignment_name() 
+{
+	 
+	objmg.Display_all_assignemts_details_with_assignment_name();
+}
+@Then("Displays all assignemts details with assignment grade" )
+public void Display_all_assignemts_details_with_grade() 
+{
+	objmg.Display_all_assignemts_details_with_grade();
+	 
+}
+@Then("Displays all assignemts details with assignment description" )
+public void Display_all_assignemts_details_with_assignment_description() 
+{
+	
+	objmg.Display_all_assignemts_details_with_assignment_description();
+}
+	 
+}

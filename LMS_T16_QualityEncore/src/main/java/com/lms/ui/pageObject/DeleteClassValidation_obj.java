@@ -4,11 +4,10 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
+//import org.junit.Assert;
 import com.lms.ui.util.BaseClass;
 import com.lms.ui.util.LoggerLoad;
-
-import static org.junit.Assert.assertTrue;
+//import static org.junit.Assert.Assert.assertTrue;
 
 public class DeleteClassValidation_obj extends BaseClass{
 
@@ -40,10 +39,10 @@ public class DeleteClassValidation_obj extends BaseClass{
 	@FindBy(xpath = "//input[@type='checkbox' and starts-with(@id,'ex1-check')]")
 	WebElement multichkbox;
 
-	public void ManageclassLandingPage() {
+	public boolean ManageclassLandingPage() {
 		try {
 			status = manageclassmsg.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("manage class landing is displayed");
 
@@ -51,6 +50,7 @@ public class DeleteClassValidation_obj extends BaseClass{
 			LoggerLoad.error("manage class landing is not displayed");
 			System.out.println(e.getMessage());
 		}
+		return status;
 	}
 
 	public void DelBtnclick() {
@@ -74,26 +74,26 @@ public class DeleteClassValidation_obj extends BaseClass{
 		alert.dismiss();
 	}
 
-	public void Messagedisplayed() {
+	public boolean Messagedisplayed() {
 
 		try {
 			status = OutputChk.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("Alert is displayed");
 
 		} catch (AssertionError e) {
 			LoggerLoad.error("Alert is not displayed");
 
-		}
+		} return status;
 
 	}
 
-	public void YesMessagedisplayed() {
+	public boolean YesMessagedisplayed() {
 
 		try {
 			status = YesbtnChk.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("Yes button is displayed");
 
@@ -101,14 +101,14 @@ public class DeleteClassValidation_obj extends BaseClass{
 			LoggerLoad.error("Yes button is not displayed");
 
 		}
-
+return status;
 	}
 
-	public void NoMessagedisplayed() {
+	public boolean NoMessagedisplayed() {
 
 		try {
 			status = NobtnChk.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("No button is displayed");
 
@@ -116,13 +116,14 @@ public class DeleteClassValidation_obj extends BaseClass{
 			LoggerLoad.error("No button is not displayed");
 			System.out.println(e.getMessage());
 		}
+		return status;
 
 	}
 
-	public void deletebtnenabledchk() {
+	public boolean deletebtnenabledchk() {
 		try {
 			status = deleteBtnclick.isDisplayed();
-			assertTrue(status);
+		//	Assert.assertTrue(status);
 
 			LoggerLoad.info("Delete button is displayed");
 
@@ -130,41 +131,41 @@ public class DeleteClassValidation_obj extends BaseClass{
 			LoggerLoad.error("Delete button is not displayed");
 			System.out.println(e.getMessage());
 		}
-
+return status;
 	}
 
 	public void checkboxclickmethd() {
 		ChkboxClk.click();
 	}
 
-	public void chkboxselectCheckmsg() {
+	public boolean chkboxselectCheckmsg() {
 		try {
 			status = ChkboxClk.isSelected();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("Delete button is displayed");
 
 		} catch (AssertionError e) {
 			LoggerLoad.error("Delete button is not displayed");
 			System.out.println(e.getMessage());
-		}
+		}return status;
 	}
 
 	public void multichkboxclickmethod() {
 		multichkbox.click();
 	}
 
-	public void multichkboxselectCheckmsg() {
+	public boolean multichkboxselectCheckmsg() {
 		try {
 			status = multichkbox.isSelected();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("Delete button is displayed");
 
 		} catch (AssertionError e) {
 			LoggerLoad.error("Delete button is not displayed");
 			System.out.println(e.getMessage());
-		}
+		}return status;
 	}
 	
 	
