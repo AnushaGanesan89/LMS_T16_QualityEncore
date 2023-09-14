@@ -1,6 +1,4 @@
 package com.lms.ui.appHooks;
-import java.util.Properties;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -35,7 +33,7 @@ public class Hooks {
 	{
 		try {
 			try {
-				driverFactory.getDriver().quit();
+				//driverFactory.getDriver().quit();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

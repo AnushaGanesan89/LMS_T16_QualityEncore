@@ -15,14 +15,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
+
 public class DriverFactory {
 
 	public static WebDriver dr;
-	
-	
-	
-	
-	
+
 	public static WebDriver getDriver()
 	{
 		return dr;
@@ -31,8 +28,7 @@ public class DriverFactory {
 	public void setDriver()
 	{
 		FileReader reader=null;
-		String mybrowser;
-	
+		String mybrowser;	
 		try {
 			reader=new FileReader(".\\src\\test\\resources\\Config\\config.properties");
 			
