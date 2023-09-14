@@ -8,7 +8,7 @@
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.9.1</version>
+    <version>4.12.1</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 <dependency>
@@ -70,7 +70,7 @@ https://mvnrepository.com/artifact/io.cucumber/cucumber-testng
 <dependency>
     <groupId>io.github.bonigarcia</groupId>
   <artifactId>webdrivermanager</artifactId>
-   <version>5.3.3</version>
+   <version>5.5.3</version>
 </dependency>
 <!-- Below 2 dependencies for reading from Excel-->
 <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
@@ -102,7 +102,7 @@ https://mvnrepository.com/artifact/io.cucumber/cucumber-testng
 <dependency>
     <groupId>tech.grasshopper</groupId>
    <artifactId>extentreports-cucumber7-adapter</artifactId>
-    <version>1.13.0</version>
+   <version>1.13.0</version>
 </dependency> 
 <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
 <dependency>

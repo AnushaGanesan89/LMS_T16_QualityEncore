@@ -5,7 +5,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {".\\src\\test\\resources\\Features"},
+		features = {"src\\test\\resources\\Features"},
 		glue = {"com.lms.ui.stepDefinitions", "com.lms.ui.appHooks"},
 		plugin = {"pretty","html:target/lms_team16.html","json:target/lms_team16.json",
 				"junit:target/cucumber-reports/cucumber.xml",
@@ -15,9 +15,6 @@ import io.cucumber.junit.CucumberOptions;
 		
 		)
 
-
 public class Runner {
-	
-	
 
 }

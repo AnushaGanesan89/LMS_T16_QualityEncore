@@ -18,6 +18,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class DriverFactory {
 
 	public static WebDriver dr;
+	public static Properties property=new Properties();
 	
 	
 	
@@ -40,14 +41,14 @@ public class DriverFactory {
 		{
 			e.printStackTrace();
 		}
-		Properties property=new Properties();
+		
 		try {
 			property.load(reader);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	mybrowser =property.getProperty("browser");
+	mybrowser =property.getProperty("BROWSER");
 	
 	if (mybrowser.equalsIgnoreCase("chrome"))
 	{
