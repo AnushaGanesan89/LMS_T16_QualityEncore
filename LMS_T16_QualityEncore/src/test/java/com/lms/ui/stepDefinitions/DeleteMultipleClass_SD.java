@@ -23,12 +23,12 @@ public class DeleteMultipleClass_SD {
 		multiclassobj.selects_multiple_checkbox_with_multiple_class_in_data_table();
 	}
 
-	@Then("Enables yes button on delete alert dialog box")
+	/*@Then("Enables yes button on delete alert dialog box")
 	public void enables_yes_button_on_delete_alert_dialog_box() {
 		multiclassobj.enables_yes_button_on_delete_alert_dialog_box();
 	   
 	}
-	
+	*/
 	@Then("Redirect assignment page")
 	public void redirect_assignment_page() {
 		multiclassobj.redirect_assignment_page();

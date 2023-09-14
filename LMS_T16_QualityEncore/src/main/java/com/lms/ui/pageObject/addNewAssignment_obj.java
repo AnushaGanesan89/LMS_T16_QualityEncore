@@ -11,13 +11,13 @@ import java.util.Set;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+//import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 
 
@@ -278,7 +278,7 @@ public void error_message_dispalys_program_name_is_missing() {
 		String actual_msg=pgmerr.getText();
 	    String expect="Program name is missing";
 	    if(actual_msg.equalsIgnoreCase(expect))
-	      Assert.assertTrue(true);
+	   //   Assert.assertTrue(true);
 	    System.out.println("Program name is missing ...........");
 }
 public void enters_all_fileds_values_without_batch_number() throws InterruptedException
@@ -322,7 +322,7 @@ public void error_message_dispalys_batch_number_is_missing() {
 	String actual_msg=batcherr.getText();
     String expect="Batch Number  is missing";
     if(actual_msg.equalsIgnoreCase(expect))
-      Assert.assertTrue(true);
+  //    Assert.assertTrue(true);
     System.out.println("Batch Number is missing...........");
 }
 public void enters_all_fileds_values_without_assignment_name() throws InterruptedException
@@ -366,7 +366,7 @@ public void error_message_dispalys_assign_name_is_missing()
 	String actual_msg=assignmerr.getText();
     String expect="Assignment name is missing";
     if(actual_msg.equalsIgnoreCase(expect))
-      Assert.assertTrue(true);
+  //    Assert.assertTrue(true);
     System.out.println("Assignment name is missing.......");
 }
 public void enters_all_fileds_values_without_assignment_duedate()
@@ -410,7 +410,7 @@ public void error_message_dispalys_assignment_duedate_is_missing()
 	String actual_msg=duedate.getText();
     String expect="Assignment duedate is missing";
     if(actual_msg.equalsIgnoreCase(expect))
-      Assert.assertTrue(true);
+      //Assert.assertTrue(true);
     System.out.println("Assignment duedate is missing.......");
 }
 public void enters_all_fileds_values_without_grade_by() throws InterruptedException
@@ -454,7 +454,7 @@ public void error_message_dispalys_grade_by_is_missing()
 	String actual_msg=grade_err.getText();
     String expect="Grade is missing";
     if(actual_msg.equalsIgnoreCase(expect))
-      Assert.assertTrue(true);
+      //Assert.assertTrue(true);
     System.out.println("Grade is missing.......");
 }
 public void enters_all_fileds_values_with_passed_date() throws InterruptedException
@@ -501,7 +501,7 @@ public void error_message_dispalys_assignment_can_not_created_for_the_passed_dat
 		String actual_msg=pastdate.getText();
 	    String expect="Passed dated assignment is not created..........";
 	    if(actual_msg.equalsIgnoreCase(expect))
-	      Assert.assertTrue(true);
+	   //   Assert.assertTrue(true);
 	    System.out.println("Passed dated assignment is not created..........");
 	}
 

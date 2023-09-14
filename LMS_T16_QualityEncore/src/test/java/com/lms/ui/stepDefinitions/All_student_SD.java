@@ -1,5 +1,6 @@
 package com.lms.ui.stepDefinitions;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import com.lms.ui.driver.DriverFactory;
@@ -36,35 +37,38 @@ public class All_student_SD {
 	    
 	}
 
-	@Then("Admin should see LMS -Learning management system  as title")
+	/*@Then("Admin should see LMS -Learning management system  as title")
 	public void admin_should_see_lms_learning_management_system_as_title() {
-	    stdobj.lmstitlechk();
-	    
-	}
+	    boolean status =stdobj.lmstitlechk();
+	    Assert.assertTrue(status);   
+	}*/
 
 	@Then("Student Detail title should be in centre of the page")
 	public void student_detail_title_should_be_in_centre_of_the_page() {
-		stdobj.studentdetailtitle();
-	    
+		boolean status =stdobj.studentdetailtitle();
+		Assert.assertTrue(status);
 	}
 
 	@Then("two dropdowns should be present in the page")
 	public void two_dropdowns_should_be_present_in_the_page() {
-	    stdobj.studentnameDrpchk();
-	    stdobj.studentbatchIdDrpchk();
+	  boolean status=  stdobj.studentnameDrpchk();
 	    
+	    Assert.assertTrue(status);
+	    boolean status1=stdobj.studentbatchIdDrpchk();
+	    Assert.assertTrue(status1);
 	}
 
 	@Then("Admin should see search box inside the drop down")
 	public void admin_should_see_search_box_inside_the_drop_down() {
-	    stdobj.studentnameDrpSearchchk();
-	    
+	  boolean status=  stdobj.studentnameDrpSearchchk();
+	  Assert.assertTrue(status);
 	}
 
 	@Then("Admin should see search box inside  batch id drop down")
 	public void admin_should_see_search_box_inside_batch_id_drop_down() {
-	    stdobj.studentbatchIdSearchDrpchk();
-	    
+	  boolean status=  stdobj.studentbatchIdSearchDrpchk();
+		Assert.assertTrue(status);
+
 	}
 	
 

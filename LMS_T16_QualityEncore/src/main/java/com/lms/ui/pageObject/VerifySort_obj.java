@@ -1,7 +1,5 @@
 package com.lms.ui.pageObject;
 
-import static org.junit.Assert.assertTrue;
-
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -28,9 +26,31 @@ public class VerifySort_obj extends BaseClass{
 	   @FindBy(xpath = "//table[@id='myTable']/tbody/tr/td[1]")
 	   WebElement tablsrt;
 	   
+	   @FindBy(xpath = "//button[contains(text(),'Sort_ProgramgmName')]]")
+		WebElement sortPgmName;
+	   
+	   @FindBy(xpath = "//button[contains(text(),'Sort_ProgramgmDesc')]]")
+		WebElement sortPgmDesc;
+	   
+	   @FindBy(xpath = "//button[contains(text(),'Sort_ProgramgmDesc')]]")
+		WebElement sortPgmStatus;
+	   
 	   public void clickbatchid()
 	   {
 		   batchidTab.click();
+	   }
+	   
+	   public void clkSortIconProgramNameColumn()
+	   {
+		   sortPgmName.click();
+	   }
+	   public void clkSortIconProgramDescColumn()
+	   {
+		   sortPgmDesc.click();
+	   }
+	   public void clkSortIconProgramStatusColumn()
+	   {
+		   sortPgmStatus.click();
 	   }
 	   
 	   public void Sortingmethod()

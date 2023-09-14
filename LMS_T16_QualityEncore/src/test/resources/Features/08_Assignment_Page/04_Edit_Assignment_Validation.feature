@@ -95,12 +95,12 @@ Background:
     Scenario: Validate cancel button with entering values in fields
     Given Admin is in Edit assignment details popup window
     When Clicks on cancel button with entering values in fields
-    Then Navigate to manage assignment page
+    Then Navigates to Manage assignment page
     And Verify assignment updated in the data table
     
     @ClicksOnCancelButtonWithoutValue
     Scenario: Validate cancel button without entering values in fields
     Given Admin is in Edit assignment details popup window
     When Clicks on cancel button without entering values in fields
-    Then Navigate to manage assignment page
+    Then Navigates to Manage assignment page
    

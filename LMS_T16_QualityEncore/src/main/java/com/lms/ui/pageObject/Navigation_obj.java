@@ -1,7 +1,7 @@
 package com.lms.ui.pageObject;
 
-import static org.junit.Assert.assertTrue;
-
+//import static org.junit.Assert.Assert.assertTrue;
+//import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -72,11 +72,11 @@ public class Navigation_obj extends BaseClass{
 		LogoutClick.click();
 	}
 	
-	public void msgchckstdnchk()
+	public boolean msgchckstdnchk()
 	{
 		try {
 			status = StudntClick.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("Student is displayed");
 
@@ -84,13 +84,14 @@ public class Navigation_obj extends BaseClass{
 			LoggerLoad.error("Student is not displayed");
 			System.out.println(e.getMessage());
 		}
+		return status;
 	}
 	
-	public void msgclasschk()
+	public boolean msgclasschk()
 	{
 		try {
 			status = classClick.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("class is displayed");
 
@@ -98,12 +99,13 @@ public class Navigation_obj extends BaseClass{
 			LoggerLoad.error("class is not displayed");
 			System.out.println(e.getMessage());
 		}
+		return status;
 	}
-	public void msgchckprgmchk()
+	public boolean msgchckprgmchk()
 	{
 		try {
 			status = prgmclick.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("Program is displayed");
 
@@ -111,14 +113,15 @@ public class Navigation_obj extends BaseClass{
 			LoggerLoad.error("Program not displayed");
 			System.out.println(e.getMessage());
 		}
+		return status;
 	}
 	
 	
-	public void msgchckbtchmchk()
+	public boolean msgchckbtchmchk()
 	{
 		try {
 			status = btchClick.isDisplayed();
-			assertTrue(status);
+		//	Assert.assertTrue(status);
 
 			LoggerLoad.info("Batch is displayed");
 
@@ -126,13 +129,14 @@ public class Navigation_obj extends BaseClass{
 			LoggerLoad.error("Batch is not displayed");
 			System.out.println(e.getMessage());
 		}
+		return status;
 	}
 	
-	public void msgchcusrmchk()
+	public boolean msgchcusrmchk()
 	{
 		try {
 			status = usrClick.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("User is displayed");
 
@@ -140,13 +144,14 @@ public class Navigation_obj extends BaseClass{
 			LoggerLoad.error("User is not displayed");
 			System.out.println(e.getMessage());
 		}
+		return status;
 	}
 	
-	public void msgchckassignmchk()
+	public boolean msgchckassignmchk()
 	{
 		try {
 			status = assgnClick.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("Assignment is displayed");
 
@@ -154,12 +159,13 @@ public class Navigation_obj extends BaseClass{
 			LoggerLoad.error("Assignment is not displayed");
 			System.out.println(e.getMessage());
 		}
+		return status;
 	}
-	public void msgchckattdnmchk()
+	public boolean msgchckattdnmchk()
 	{
 		try {
 			status = attdnClick.isDisplayed();
-			assertTrue(status);
+		//	Assert.assertTrue(status);
 
 			LoggerLoad.info("Attendance is displayed");
 
@@ -167,19 +173,21 @@ public class Navigation_obj extends BaseClass{
 			LoggerLoad.error("Attendance is not displayed");
 			System.out.println(e.getMessage());
 		}
+		return status;
 	}
-		public void msgchlogoutchk()
+		public boolean msgchlogoutchk()
 		{
 			try {
 				status = LogoutClick.isDisplayed();
-				assertTrue(status);
+			//	Assert.assertTrue(status);
 
 				LoggerLoad.info("Logout is displayed");
 
 			} catch (AssertionError e) {
 				LoggerLoad.error("Logout is not displayed");
 				System.out.println(e.getMessage());
-			}
+			}return status;
 		}
+		
 	}
 	

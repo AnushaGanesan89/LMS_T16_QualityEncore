@@ -1,7 +1,7 @@
 package com.lms.ui.pageObject;
 
-import static org.junit.Assert.assertTrue;
-
+//import static org.junit.Assert.Assert.assertTrue;
+//import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -60,11 +60,11 @@ public class AddNewClass_obj extends BaseClass {
 	{
 		cancelclick.click();
 	}
-	public void checkpopmsg()
+	public boolean checkpopmsg()
 	{
 		try {
 			status = OutputclassdetailChk.isDisplayed();
-			assertTrue(status);
+		//	Assert.assertTrue(status);
 
 			LoggerLoad.info("No button is displayed");
 
@@ -72,44 +72,44 @@ public class AddNewClass_obj extends BaseClass {
 			LoggerLoad.error("No button is not displayed");
 			System.out.println(e.getMessage());
 		}
-		
+		return status;
 	}
-	public void checkbatchdrpmsg()
+	public boolean checkbatchdrpmsg()
 	{
 		try {
 			status = Batchidval.isDisplayed();
-			assertTrue(status);
+		//	Assert.assertTrue(status);
 
 			LoggerLoad.info("batch id is displayed");
 
 		} catch (AssertionError e) {
 			LoggerLoad.error("batch id is not displayed");
 			System.out.println(e.getMessage());
-		}
+		}return status;
 		
 		
 	}
 	
-	public void checknoclasspmsg()
+	public boolean checknoclasspmsg()
 	{
 		try {
 			status = noclassval.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("no of classes is displayed");
 
 		} catch (AssertionError e) {
 			LoggerLoad.error("no of classes  is not displayed");
 			System.out.println(e.getMessage());
-		}
+		}return status;
 		
 		
 	}
-	public void checkclasdtmsg()
+	public boolean checkclasdtmsg()
 	{
 		try {
 			status = clasdtval.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("class date is displayed");
 
@@ -117,14 +117,14 @@ public class AddNewClass_obj extends BaseClass {
 			LoggerLoad.error("class date is not displayed");
 			System.out.println(e.getMessage());
 		}
-		
+		return status;
 		
 	}
-	public void checkstaffidmsg()
+	public boolean checkstaffidmsg()
 	{
 		try {
 			status = staffval.isDisplayed();
-			assertTrue(status);
+		//	Assert.assertTrue(status);
 
 			LoggerLoad.info("staff id is displayed");
 
@@ -133,21 +133,21 @@ public class AddNewClass_obj extends BaseClass {
 			System.out.println(e.getMessage());
 		}
 		
-		
+		 return status;
 	}
 
-	public void checfieldsmsg()
+	public boolean checfieldsmsg()
 	{
 		try {
 			status = saveBtnclick.isDisplayed();
-			assertTrue(status);
+		//	Assert.assertTrue(status);
 
 			LoggerLoad.info("No button is displayed");
 
 		} catch (AssertionError e) {
 			LoggerLoad.error("No button is not displayed");
 			System.out.println(e.getMessage());
-		}
+		}return status;
 		
 		
 	}
@@ -166,32 +166,32 @@ public class AddNewClass_obj extends BaseClass {
 	}
 	
 	
-	public void alertmsg()
+	public boolean alertmsg()
 	{
 		try {
 			status = OutputclassdetailChk.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("class added is displayed");
 
 		} catch (AssertionError e) {
 			LoggerLoad.error("class added is not displayed");
 			System.out.println(e.getMessage());
-		}
+		}return status;
 	}
 	
-	public void mangecalssnoentrychk()
+	public boolean mangecalssnoentrychk()
 	{
 		try {
 			status = manageclassnoent.isDisplayed();
-			assertTrue(status);
+			//Assert.assertTrue(status);
 
 			LoggerLoad.info("class added is displayed");
 
 		} catch (AssertionError e) {
 			LoggerLoad.error("class added is not displayed");
 			System.out.println(e.getMessage());
-		}
+		}return status;
 	}
 	
 	

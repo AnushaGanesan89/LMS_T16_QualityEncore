@@ -13,7 +13,6 @@ import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import io.qameta.allure.Allure;
 
 public class Hooks {
 	private static DriverFactory driverFactory =new DriverFactory();
@@ -40,21 +39,14 @@ public class Hooks {
 			try {
 				driverFactory.getDriver().quit();
 			} catch (Exception e) {
-				
+				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		} catch (Exception e) {
-	
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	
-	/*	if (scenario.isFailed()) {
-			// take screenshot:
-				String screenshotName = scenario.getName().replaceAll(" ", "_");
-				byte[] sourcePath = ((TakesScreenshot)BaseClass.driver).getScreenshotAs(OutputType.BYTES);
-				//scenario.attach(sourcePath, "image/png", screenshotName);
-				Allure.addAttachment("Failed screenshots", new ByteArrayInputStream(sourcePath));
-		}
-*/
+
 }
 }

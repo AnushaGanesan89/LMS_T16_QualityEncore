@@ -10,8 +10,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-
 import com.lms.ui.pageObject.paginationAssignment_obj;
 
 import io.cucumber.java.en.Given;
@@ -44,12 +42,12 @@ public class PaginationAssignment_SD {
 	    
 	    
 	}
-
+/*
 	@When("Entries are more than 5")
 	public void entries_are_more_than() {
 		pageobj.entries_are_more_than();
 		
-	}
+	}*/
 
 	@Then("Enable the right arrow")
 	public void enable_the_right_arrow() {

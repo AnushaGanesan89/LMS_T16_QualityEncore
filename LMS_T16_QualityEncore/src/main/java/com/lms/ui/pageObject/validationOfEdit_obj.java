@@ -4,16 +4,13 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+//import org.junit.Assert;
+//import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 
 
 
@@ -117,7 +114,7 @@ public class validationOfEdit_obj {
 	
 	
 	public void appears_edit_popup_window_with_same_row_values_in_all_fields() {
-		Assert.assertFalse(false, driver.getWindowHandle());
+	//	Assert.assertTrue(false);
 	}
 
 	

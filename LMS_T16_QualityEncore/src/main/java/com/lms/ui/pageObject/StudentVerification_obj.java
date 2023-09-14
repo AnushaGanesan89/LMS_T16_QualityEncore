@@ -1,10 +1,10 @@
 package com.lms.ui.pageObject;
 
-import static org.junit.Assert.assertTrue;
+//import static org.junit.Assert.assertTrue;
 
 import java.util.Iterator;
 import java.util.List;
-
+//import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -46,18 +46,18 @@ public class StudentVerification_obj extends BaseClass {
 		stdBtnclick.click();
 	}
 	
-	public void studentdetailtitle()
+	public boolean studentdetailtitle()
 	{
 		try {
 			status = studentDetailspage.isDisplayed();
-			assertTrue(status);
+		//	Assert.assertTrue(status);
 
 			LoggerLoad.info("student detail page is displayed");
 
 		} catch (AssertionError e) {
 			LoggerLoad.error("student detail page is not displayed");
 			System.out.println(e.getMessage());
-		}
+		}return status;
 	}	
 	
 	
@@ -97,77 +97,76 @@ public class StudentVerification_obj extends BaseClass {
 		}
 		
 		
-		public void lmstitlechk()
+		public boolean lmstitlechk()
 		{
 			try {
 				status = lmstitlelink.isDisplayed();
-				assertTrue(status);
+				
 
 				LoggerLoad.info("LMS title page is displayed");
 
 			} catch (AssertionError e) {
 				LoggerLoad.error("LMS title  page is not displayed");
 				System.out.println(e.getMessage());
-			}
+			}return status;
 		}	
 		
 		
-		public void studentnameDrpchk()
+		public boolean studentnameDrpchk()
 		{
 			try {
 				status = studentnamedrp.isDisplayed();
-				assertTrue(status);
+				
 
 				LoggerLoad.info("student name dropdown is displayed");
 
 			} catch (AssertionError e) {
 				LoggerLoad.error("student name dropdown is not displayed");
 				System.out.println(e.getMessage());
-			}
+			}return status;
 		}	
 		
-		public void studentbatchIdDrpchk()
+		public boolean studentbatchIdDrpchk()
 		{
 			try {
 				status = studentbatchid.isDisplayed();
-				assertTrue(status);
+				
 
 				LoggerLoad.info("student name dropdown is displayed");
 
 			} catch (AssertionError e) {
 				LoggerLoad.error("student name dropdown is not displayed");
 				System.out.println(e.getMessage());
-			}
+			}return status;
 		}	
 	
-		public void studentnameDrpSearchchk()
+		public boolean studentnameDrpSearchchk()
 		{
 			studentnamedrp.click();
 			try {
 				status = searchdrp.isDisplayed();
-				assertTrue(status);
+				
 
 				LoggerLoad.info("student name dropdown is displayed");
 
 			} catch (AssertionError e) {
 				LoggerLoad.error("student name dropdown is not displayed");
 				System.out.println(e.getMessage());
-			}
+			}return status;
 		}	
 		
-		public void studentbatchIdSearchDrpchk()
+		public boolean studentbatchIdSearchDrpchk()
 		{
 			studentbatchid.click();
 			try {
 				status = searchdrp.isDisplayed();
-				assertTrue(status);
-
+			
 				LoggerLoad.info("student name dropdown is displayed");
 
 			} catch (AssertionError e) {
 				LoggerLoad.error("student name dropdown is not displayed");
 				System.out.println(e.getMessage());
-			}
+			}return status;
 		}	
 	
 	
