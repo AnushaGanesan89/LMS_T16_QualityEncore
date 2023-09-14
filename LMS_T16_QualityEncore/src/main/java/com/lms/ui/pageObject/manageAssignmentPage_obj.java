@@ -83,7 +83,7 @@ public class manageAssignmentPage_obj {
 		}
 
 		
-		public void checks_spellings_for_all_the_fields() {
+	public void checks_spellings_for_all_the_fields() {
 			for(int i=0;i<text.size();i++)
 			{
 			SpellChecker checker = new SpellChecker();
