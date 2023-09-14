@@ -26,7 +26,7 @@ public class manageAssignmentPage_obj {
 	@FindBy(css="div[class='assignment-container']h1")
 	WebElement header;
 	@FindBy(tagName="body")
-	List<WebElement> text; 
+	WebElement text; 
 	@FindBy(xpath="//button[contains(text),'header-delete-icon']")
 	WebElement deleteicon;
 	@FindBy(id="search_form_input_assignment")
@@ -78,13 +78,18 @@ public class manageAssignmentPage_obj {
 			// identify element and input text inside it
 		      
 		      
-			System.out.println("Text content: "+text.getText());
+			System.out.println("Text content: "+ text.getText());
 		   
 		}
 
 		
+<<<<<<< HEAD
 	public void checks_spellings_for_all_the_fields() {
 			for(int i=0;i<text.size();i++)
+=======
+		public void checks_spellings_for_all_the_fields() {
+			for(int i=0;i<((List<WebElement>) text).size();i++)
+>>>>>>> e8cde174e12b9937b7edadf22dab645033a6dc7d
 			{
 			SpellChecker checker = new SpellChecker();
 
@@ -173,7 +178,7 @@ public class manageAssignmentPage_obj {
 			 
 			 public void validate_text_above_the_footer_Showing_zero_to_zero_of_zero_entries() {
 			    String text=pagemsg.getText();
-			    text.substring(text.indexOf("g")+1 ,text.indexOf("o")+1 , text.indexOf("f")+1));
+			    text.substring(text.indexOf("g")+1 ,text.indexOf("o")+1);
 			    
 			 
 			 }
@@ -191,7 +196,7 @@ public class manageAssignmentPage_obj {
 			 public void gets_response_time_for_navigation_from_dashboard_to_assignment_page()
 			 {
 				 long startTime = System.currentTimeMillis();
-				 WebDriverWait wait=new WebDriverWait(driver, 10);
+				 WebDriverWait wait= new WebDriverWait(driver, 10);
 			 wait.until(ExpectedConditions.presenceOfElementLocated(By.id("assignment-click")));
 
 			// Get the End Time

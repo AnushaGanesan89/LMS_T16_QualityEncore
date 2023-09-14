@@ -12,8 +12,7 @@ import org.openqa.selenium.JavascriptExecutor;
 
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.lms.ui.driver.DriverFactory;
-import com.lms.ui.pageObjets.Program_obj;
-
+import com.lms.ui.pageObject.Program_obj;
 
 import io.cucumber.java.en.*;
 

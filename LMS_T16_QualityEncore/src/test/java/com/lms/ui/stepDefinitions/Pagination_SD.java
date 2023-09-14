@@ -3,7 +3,7 @@ package com.lms.ui.stepDefinitions;
 import org.junit.Assert;
 
 import com.lms.ui.driver.DriverFactory;
-import com.lms.ui.pageObjets.Program_obj;
+import com.lms.ui.pageObject.Program_obj;
 
 import io.cucumber.java.en.*;
 
